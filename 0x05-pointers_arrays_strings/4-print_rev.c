@@ -3,6 +3,7 @@
 /**
  * print_rev - print string in reverse, followed by a new line.
  * @x: input string
+ * Return: 0
  */
 
 void print_rev(char *x)
@@ -13,10 +14,10 @@ void print_rev(char *x)
 	while (*x != '\0')
 	{
 		length++;
-		*x++;
+		x++;
 	}
 	x--;
-	for (i = length; i >= 0; i++)
+	for (i = length; i > 0; i--)
 	{
 		_putchar(*x);
 		x--;
