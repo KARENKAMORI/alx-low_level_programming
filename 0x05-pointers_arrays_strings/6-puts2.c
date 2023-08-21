@@ -11,12 +11,12 @@ void puts2(char *x)
 {
 	int length = 0;
 	int z = 0
-	char *str = x;
+	char *c = x;
 	int i;
 
-	while (*str != '\0')
+	while (*c != '\0')
 	{
-		str++;
+		c++;
 		length++;
 	}
 	z = length - 1;
