@@ -7,7 +7,7 @@
  * Return: destination
  */
 
-void *_strcpy(int *x, int *y)
+char *_strcpy(int *x, int *y)
 {
 	int i = 0;
 	int z = 0;
