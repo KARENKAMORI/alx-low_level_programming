@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * swap_int - checks and returns length of a string
+ * _strlen - checks and returns length of a string
  * @x: input string
  * Return: string length
  */
 
-int swap_int(char *x)
+int _strlen(char *x)
 {
 	int length = 0;
 
