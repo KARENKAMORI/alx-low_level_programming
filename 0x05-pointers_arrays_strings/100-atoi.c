@@ -18,7 +18,7 @@ int _atoi(char *x)
 	digit = 0;
 
 	while (x[length] != '\0')
-		len++;
+		length++;
 
 	while (i < length && y == 0)
 	{
@@ -31,10 +31,10 @@ int _atoi(char *x)
 			if (a % 2)
 				digit = -digit;
 			n = n * 10 + digit;
-			f = 1;
+			y = 1;
 			if (x[i + 1] < '0' || x[i + 1] > '9')
 				break;
-			f = 0;
+			y = 0;
 		}
 		i++;
 	}
