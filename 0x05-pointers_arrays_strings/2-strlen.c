@@ -6,7 +6,7 @@
  * Return: string length
  */
 
-void swap_int(char *x)
+int swap_int(char *x)
 {
 	int length = 0;
 
