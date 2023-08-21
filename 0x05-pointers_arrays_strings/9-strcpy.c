@@ -16,7 +16,7 @@ char *_strcpy(int *x, int *y)
 	{
 		i++;
 	}
-	for (; z < i; z++)
+	for ( ; z < i; z++)
 	{
 		x[z] = y[z];
 	}
