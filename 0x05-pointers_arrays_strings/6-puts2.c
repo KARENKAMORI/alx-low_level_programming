@@ -10,7 +10,7 @@
 void puts2(char *x)
 {
 	int length = 0;
-	int z = 0
+	int z = 0;
 	char *c = x;
 	int i;
 
