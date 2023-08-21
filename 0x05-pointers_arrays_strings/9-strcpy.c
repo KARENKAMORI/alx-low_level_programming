@@ -2,12 +2,12 @@
 
 /**
  * char *_strcpy - copies the string being pointed at.
- * @x : destination for copying
+ * @x : destination to copy to
  * @y: where to copy from
  * Return: destination
  */
 
-char *_strcpy(int *x, int *y)
+char *_strcpy(char *x, char *y)
 {
 	int i = 0;
 	int z = 0;
