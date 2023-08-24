@@ -9,9 +9,10 @@
  *
  * Return: dest
  */
-char *_strncat(char *dest, char *src, int x)
+char *_strncat(char *src, char *dest, int x)
 {
-	int i, j;
+	int j;
+	int i;
 
 	i = 0;
 	while (dest[i] != '\0')
