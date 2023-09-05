@@ -25,7 +25,7 @@ int count_word(char *s)
 		}
 	}
 
-	return (w);
+	return (j);
 }
 /**
  * **strtow - Function spliting a string into words
