@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * free_dlistint - Frees a linked dlistint_t list.
- * @head: The head of the dlistint_t list.
+ * free_dlistint - Function frees a linked dlistint_t list.
+ * @head: dlistint_t list head.
  */
 void free_dlistint(dlistint_t *head)
 {
