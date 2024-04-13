@@ -1,12 +1,12 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_add - adds an element to the @ht hash table when it doesn't exist
+ * hash_table_add - f element doesn't exist, it's added to the @ht hash table
  *
- * @key: the key (cannot be empty)
- * @new_value: duplicated value associated with the key
+ * @key: None-empty key.
+ * @new_value: key associated duplicated value
  *
- * Return: the new node, NULL if fails
+ * Return: the new node, failure: NULL
  */
 
 hash_node_t *hash_table_add(const char *key, char *new_value)
