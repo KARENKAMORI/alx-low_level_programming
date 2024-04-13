@@ -1,12 +1,12 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_add - adds to @ht hash table an element when it doesn't exist
+ * hash_table_add - adds an element to the @ht hash table when it doesn't exist
  *
- * @key: none-empty key
- * @new_value: duplicated key-associated value
+ * @key: the key (cannot be empty)
+ * @new_value: duplicated value associated with the key
  *
- * Return: new node, if fails: NULL
+ * Return: the new node, NULL if fails
  */
 
 hash_node_t *hash_table_add(const char *key, char *new_value)
@@ -33,26 +33,26 @@ hash_node_t *hash_table_add(const char *key, char *new_value)
 }
 
 /**
- * hash_table_set - sets or adds an element to @ht hash table
+ * hash_table_set - adds or sets an element to the @ht hash table
  *
- * @ht: where to add or update the key/value to
- * @key: none-empty key
- * @value: key associated value
+ * @ht: the hash table to add or update the key/value to
+ * @key: the key (cannot be empty)
+ * @value: value associated with the key
  *
- * Return: Success: 1, 0 otherwise
+ * Return: 1 if it succeeded, 0 otherwise
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int i;
+	unsigned long int index;
 	hash_node_t *new_node = NULL, *tmp_node = NULL;
 	char *new_value = NULL;
 
 	if (!ht || !key || !value || strlen(key) == 0)
 		return (0);
 
-	i = key_index((const unsigned char *)key, ht->size);
-	tmp_node = ht->array[i];
+	index = key_index((const unsigned char *)key, ht->size);
+	tmp_node = ht->array[index];
 
 	new_value = strdup(value);
 	if (!new_value)
@@ -74,8 +74,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new_node = hash_table_add(key, new_value);
 		if (!new_node)
 			return (0);
-		new_node->next = ht->array[i];
-		ht->array[i] = new_node;
+		new_node->next = ht->array[index];
+		ht->array[index] = new_node;
 	}
 
 	return (1);
