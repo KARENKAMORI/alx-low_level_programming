@@ -3,21 +3,21 @@
 /**
  * hash_table_print - prints a hash table
  *
- * @ht: the hash table to print
+ * @ht: hash table to be printed
  */
 
 void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *tmp_node = NULL;
-	unsigned long int index = 0;
+	unsigned long int i = 0;
 	char *comma = "";
 
 	if (ht)
 	{
 		printf("{");
-		while (index < ht->size)
+		while (i < ht->size)
 		{
-			tmp_node = ht->array[index];
+			tmp_node = ht->array[i];
 
 			while (tmp_node)
 			{
@@ -29,7 +29,7 @@ void hash_table_print(const hash_table_t *ht)
 
 				tmp_node = tmp_node->next;
 			}
-			index++;
+			i++;
 		}
 		printf("}\n");
 	}
