@@ -44,15 +44,15 @@ hash_node_t *hash_table_add(const char *key, char *new_value)
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index;
+	unsigned long int i;
 	hash_node_t *new_node = NULL, *tmp_node = NULL;
 	char *new_value = NULL;
 
 	if (!ht || !key || !value || strlen(key) == 0)
 		return (0);
 
-	index = key_index((const unsigned char *)key, ht->size);
-	tmp_node = ht->array[index];
+	i = key_index((const unsigned char *)key, ht->size);
+	tmp_node = ht->array[i];
 
 	new_value = strdup(value);
 	if (!new_value)
@@ -74,8 +74,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new_node = hash_table_add(key, new_value);
 		if (!new_node)
 			return (0);
-		new_node->next = ht->array[index];
-		ht->array[index] = new_node;
+		new_node->next = ht->array[i];
+		ht->array[i] = new_node;
 	}
 
 	return (1);
