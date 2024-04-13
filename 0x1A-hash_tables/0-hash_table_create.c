@@ -1,17 +1,17 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_create - creates a hash table
+ * hash_table_create - creates hash table
  *
- * @size: the size of the array
+ * @size: Array size
  *
- * Return: the newly created hash_table, or NULL on failure
+ * Return: new hash_table, or Failure: NULL
  */
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new_ht = NULL;
-	unsigned long int index = 0;
+	unsigned long int i = 0;
 
 	new_ht = malloc(sizeof(hash_table_t));
 	if (new_ht)
@@ -24,10 +24,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 			return (NULL);
 		}
 
-		while (index < size)
+		while (i < size)
 		{
-			new_ht->array[index] = NULL;
-			index++;
+			new_ht->array[i] = NULL;
+			i++;
 		}
 	}
 
