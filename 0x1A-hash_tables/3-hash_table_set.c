@@ -33,13 +33,13 @@ hash_node_t *hash_table_add(const char *key, char *new_value)
 }
 
 /**
- * hash_table_set - adds or sets an element to the @ht hash table
+ * hash_table_set - sets or adds an element to the @ht hash table
  *
- * @ht: the hash table to add or update the key/value to
- * @key: the key (cannot be empty)
- * @value: value associated with the key
+ * @ht: the hash table to update or add the key/value to
+ * @key: none-empty key
+ * @value: key associated value
  *
- * Return: 1 if it succeeded, 0 otherwise
+ * Return: Success: 1, 0 otherwise
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
